@@ -43,7 +43,7 @@ def reverse_words(arr):
 # please note that this is language dependent:
 # if are arrays sent by value, reversing should be done in place
 
-def mirrorReverse(arr, left, end):
+def mirrorReverse(arr, start, end):
     while (start < end):
         arr[start], arr[end] = arr[end], arr[start]
         start += 1
