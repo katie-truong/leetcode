@@ -30,7 +30,7 @@ def minAddToMakeValid(self, S):
         return total + len(d)
 
 # Using constant variables: time complexity: O(n), space complexity: O(1)
-def minAddToMakeValid(self, S):
+def minAddToMakeValid2(self, S):
     if S == "":
         return 0
     bal = 0
