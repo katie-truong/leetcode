@@ -57,4 +57,41 @@ def get_number_of_islands(matrix):
             
   return total
 
+# Take 2: DFS
+
+class Solution:
+    def numIslands(self, grid: List[List[str]]) -> int:
+        count = 0
+        
+        if not grid or len(grid) == 0:
+            return count
+        
+        m = len(grid)
+        n = len(grid[0])
+        
+        MOVES = {(0,1),(0,-1),(1,0),(-1,0)}
+        
+        def valid(r,c):
+            nonlocal grid
+            return 0 <= r < m and 0 <= c < n and grid[r][c] == '1'
+        
+        def dfs(r,c):
+            if not valid(r,c):
+                return
+            
+            grid[r][c] = '0'
+            
+            for move in MOVES:
+                newR = r + move[0]
+                newC = c + move[1]
+                dfs(newR, newC)
+                
+        for r in range(m):
+            for c in range(n):
+                if grid[r][c] == '1':
+                    count += 1
+                    dfs(r,c)
+                    
+        return count
+
  
