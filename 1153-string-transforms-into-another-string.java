@@ -1,3 +1,11 @@
+/*
+- Create a mapping between the characters of str1 and str2. 
+- For each character of str1, it can only map to another character in str2. If a character has two mappings, the conversion is impossible.
+- If str2 contains 26 unique characters, there would be no "temp" character to transfer for the conversion. Hence, it's impossible, 
+unless str1 is exactly equal to str2.
+- Optimization: We can count the number of unique characters in str2 inside the same for loop (and only having 1 iteration).
+*/
+
 import java.util.HashMap;
 import java.util.HashSet;
 
