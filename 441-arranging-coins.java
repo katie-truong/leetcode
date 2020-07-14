@@ -1,4 +1,4 @@
-class Solution {
+class Solution441 {
     public int arrangeCoins(int n) {
         int level = 0;
         while (n >= 0) {
